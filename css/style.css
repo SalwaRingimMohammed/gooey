@@ -1,0 +1,140 @@
+body{
+    --s: 140px; /* control the size */  
+    --_g: #0000 52%,#394039 /* first color */ 54% 57%,#0000 59%; 
+    background: 
+        radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
+        radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
+        radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
+        radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
+        #c0ebbc; /* second color */
+    background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/5.667);
+}
+
+.lamp{
+    background-color: #57067d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 300px;
+    clip-path: polygon(35% 0, 65% 0, 85% 70%, 70% 90%, 90% 100%, 10% 100%, 30% 90%, 15% 70%);
+}
+
+.glass{
+    background-color:#cfe8cc;
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    bottom: 30%;
+    overflow: hidden;
+}
+
+.lava{
+    filter: url("#gooey");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.blob{
+    position: absolute;
+    background-color: #a945c4;
+    border-radius: 50%;
+}
+
+#top{
+    width: 100%;
+    height: 5%;
+    top: -4%;
+}
+
+#bottom{
+    width: 100%;
+    height: 5%;
+    bottom: -4%;
+}
+
+.blob:nth-child(1){
+    width: 15%;
+    height: 13%;
+    left: 45%;
+    top: -15%;
+
+    animation: blob-one ease-in-out 8s infinite;
+  }
+
+  @keyframes blob-one{
+    0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(0, 500px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+  }
+
+.blob:nth-child(2){
+    width: 25%;
+    height: 23%;
+    left: 25%;
+    top: -20%;
+
+    animation: blob-two ease-in-out 8s infinite;
+}
+
+@keyframes blob-two{
+    0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(0, 390px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+}
+
+.blob:nth-child(3){
+    width: 30%;
+    height: 33%;
+    right: 15%;
+    bottom: -20%;
+
+    animation: blob-three ease-in-out 10s infinite;
+}
+
+@keyframes blob-three{
+    0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(0, -450px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+}
+
+.blob:nth-child(4){
+    width: 25%;
+    height: 27%;
+    left: 15%;
+    bottom: -20%;
+
+    animation: blob-four ease-in-out 8s infinite;
+}
+
+@keyframes blob-four{
+    0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(0, -430px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+}
